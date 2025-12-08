@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-poppins: "poppins", sans-serif;
+  --font-comfortaa: "Comfortaa", sans-serif;
+  /* --font-sans: var(--font-poppins); */
+  --font-display: var(--font-poppins);
+  --font-body: var(--font-poppins);
+
+  --color-primary: #8a499f;
+  --color-primary-DEFAULT: #8a499f;
+  --color-background-light: #f8f9fa;
+  --color-background-dark: #0a0a14;
+  
+  --radius-DEFAULT: 0.75rem;
+
+  /* Viewport width based text sizes */
+  --text-xs: 0.65vw;
+  --text-sm: 0.75vw;
+  --text-base: 0.85vw;
+  --text-lg: 1vw;
+  --text-xl: 1.25vw;
+  --text-2xl: 1.5vw;
+  --text-3xl: 2vw;
+  --text-4xl: 2.5vw;
+  --text-5xl: 3vw;
+  --text-6xl: 4vw;
+  --text-7xl: 5vw;
+  --text-8xl: 6vw;
+  --text-9xl: 7vw;
+}
+
+/* Custom Utilities */
+
+
+/* Custom Utilities */
+.gradient-text {
+  background: linear-gradient(90deg, #f7941d, #f15a24, #ef416d, #8a499f, #28a7de, #009345, #fbb03b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-poppins);
+}
