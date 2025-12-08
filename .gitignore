@@ -7,11 +7,20 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+
+# Build outputs
 dist
 dist-ssr
 *.local
-*.env
+
+# Environment files
+.env
+.env.*    # In case you have .env.local, .env.production, etc.
+
+# Prevent gitignore itself from being tracked
+.gitignore
 
 # Editor directories and files
 .vscode/*
