@@ -12,9 +12,12 @@ export default function AppDownload() {
     apk: "https://img.icons8.com/?size=60&id=Qn4GH3u6CYo5&format=png&color=000000",
   };
   return (
-    <section id="download" className="bg-gray-50 px-6 lg:px-[5vw]  w-full flex items-center h-auto lg:h-[60vh] justify-center dark:bg-background-dark py-16 lg:py-[10vw] ">
-      <div className=" flex flex-col lg:flex-row items-center w-full   justify-around gap-10 lg:gap-0 ">
-        <div className=" w-full lg:w-fit text-center lg:text-left ">
+    <section id="download" className="bg-gray-50 relative px-6 lg:px-[5vw]  w-full flex items-center h-auto lg:h-[60vh] justify-center dark:bg-background-dark py-16 lg:py-[10vw] z-[1] ">
+      <div className="  absolute top-1/6 md:top-3/4  blur-[4px] md:blur-[0.5vw] left-1/2 md:left-1/4 grayscale-100 -translate-x-1/2 -translate-y-1/2 z-[1] md:h-[20vw] h-[150px]  w-[150px] md:w-[20vw]">
+        <img src="logo.png" className="h-full w-full" alt="" />
+      </div>
+      <div className="  flex flex-col lg:flex-row items-center w-full   justify-around gap-10 lg:gap-0 ">
+        <div className="  w-full lg:w-fit text-center lg:text-left ">
           <h2 className="font-comfortaa text-[32px] lg:text-3xl font-light tracking-tight text-gray-900 dark:text-white sm:text-5xl">
             Download Our App
           </h2>
@@ -69,7 +72,9 @@ export default function AppDownload() {
               </button>
             </a>
             <a
-              href="#"
+              // href="#"
+              href="https://aftv.news/1998462"
+
               className="flex items-center justify-center gap-4 rounded-lg bg-primary-DEFAULT/10 dark:bg-gradient-to-tr from-primary-DEFAULT to-transparent p-6 lg:p-[2vw] text-left hover:bg-primary-DEFAULT/20 dark:hover:bg-primary-DEFAULT/30 transition-colors duration-300"
             >
               <button

@@ -24,7 +24,7 @@ function App() {
             <div className="mt-20 lg:mt-[5vw]  text-white flex item-center justify-center">
               <a
                 target="_blank"
-                href="http://zumtv.net/LT62Kb8RUL"
+                href="https://hexa4k.net:2087"
                 className="rounded-md lg:text-lg   border border-white/10 flex gap-4 lg:gap-[1vw] font-poppins hover:bg-primary/90 p-4 lg:p-[1.2vw] bg-primary"
               >
                 Reseller Portal Login{" "}

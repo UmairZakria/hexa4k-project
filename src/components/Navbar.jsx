@@ -36,13 +36,13 @@ export default function Navbar() {
   const tils = [
     " ",
     " We wish you Merry Christmas and Happy New Year! ",
-    " H4k Hexa ",
+    " H4K Hexa4K ",
     " We wish you Merry Christmas and Happy New Year! ",
-    " H4k Hexa ",
+    " H4K Hexa4K ",
     " We wish you Merry Christmas and Happy New Year! ",
-    " H4k Hexa ",
+    " H4K Hexa4K ",
     " We wish you Merry Christmas and Happy New Year! ",
-    " H4k Hexa ",
+    " H4K Hexa4K ",
   ];
 
   return (
@@ -88,7 +88,7 @@ export default function Navbar() {
             <img
               className="h-16 md:h-[4vw] w-auto saturate-200"
               src="logo.png"
-              alt="H4K HEXA 4K Logo"
+              alt="H4K Hexa4K 4K Logo"
             />
           </a>
         </div>
@@ -109,19 +109,19 @@ export default function Navbar() {
 
         <div className="hidden lg:flex lg:gap-x-[2vw] uppercase tracking-widest">
           <a
-            href="#"
+            href="#download"
             className="text-sm leading-6 text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
             Download
           </a>
           <a
-            href="#"
+            href="#features"
             className="text-sm leading-6 text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
-            About
+            Features
           </a>
           <a
-            href="#"
+            href="#reviews"
             className="text-sm leading-6 text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
             Reviews
@@ -160,7 +160,7 @@ export default function Navbar() {
                 <img 
                   className="h-16 w-auto" 
                   src="logo.png" 
-                  alt="H4K HEXA Logo" 
+                  alt="H4K Hexa4K Logo" 
                 />
               </a>
               <button
