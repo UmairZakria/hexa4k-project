@@ -176,19 +176,19 @@ export default function Navbar() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <a
-                    href="#"
+                    href="#download"
                     className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium  text-white hover:bg-gray-800 transition"
                   >
                     Download
                   </a>
                   <a
-                    href="#"
+                    href="#features"
                     className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium  text-white hover:bg-gray-800 transition"
                   >
-                    About
+                    Features
                   </a>
                   <a
-                    href="#"
+                    href="#reviews"
                     className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium  text-white hover:bg-gray-800 transition"
                   >
                     Reviews

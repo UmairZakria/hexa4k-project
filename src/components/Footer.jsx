@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 lg:space-y-[1vw]">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="text-[14px] lg:text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                 >
                   Home
@@ -36,7 +36,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#features"
                   className="text-[14px] lg:text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                 >
                   Features
@@ -44,10 +44,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#download"
                   className="text-[14px] lg:text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                 >
-                  Pricing
+                  Download
                 </a>
               </li>
             </ul>

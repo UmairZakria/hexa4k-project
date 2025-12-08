@@ -33,7 +33,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className=" px-6 lg:px-[5vw] py-24 sm:py-32">
+    <section id="reviews" className=" px-6 lg:px-[5vw] py-24 sm:py-32">
       <div className="mx-auto w-full lg:w-[35vw] text-center lg:text-left">
         <h2 className="font-comfortaa text-[32px] lg:text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
           What Our Customers Say's

@@ -12,7 +12,7 @@ export default function AppDownload() {
     apk: "https://img.icons8.com/?size=60&id=Qn4GH3u6CYo5&format=png&color=000000",
   };
   return (
-    <section className="bg-gray-50 px-6 lg:px-[5vw]  w-full flex items-center h-auto lg:h-[60vh] justify-center dark:bg-background-dark py-16 lg:py-[10vw] ">
+    <section id="download" className="bg-gray-50 px-6 lg:px-[5vw]  w-full flex items-center h-auto lg:h-[60vh] justify-center dark:bg-background-dark py-16 lg:py-[10vw] ">
       <div className=" flex flex-col lg:flex-row items-center w-full   justify-around gap-10 lg:gap-0 ">
         <div className=" w-full lg:w-fit text-center lg:text-left ">
           <h2 className="font-comfortaa text-[32px] lg:text-3xl font-light tracking-tight text-gray-900 dark:text-white sm:text-5xl">
