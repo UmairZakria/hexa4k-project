@@ -11,6 +11,7 @@ import SmoothScrollProvider from "./components/SmoothScrollProvider";
 import { MoveRight, Stamp, Star } from "lucide-react";
 import Stats from "./components/Stats";
 import AdventureSection from "./components/AdventureSection";
+import Slider2 from "./components/Slider2";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Navbar />
           <main>
             <Hero />
-            <Slider />
+            <Slider2 />
             <div className="mt-20 lg:mt-[5vw]  text-white flex item-center justify-center">
               <a
                 target="_blank"
@@ -33,7 +34,11 @@ function App() {
                 </span>
               </a>
             </div>
-            <Features />
+            <h1 className="text-[24px] font-comfortaa lg:text-4xl text-black dark:text-white mt-[5vw] font-bold text-center"  >
+              Unlimted Entertainment
+            </h1>
+            <Slider />
+              <Features />
 
             <div
               className="bg-gray-100 dark:bg-[#9089fc]/80 saturate-200 mx-4 lg:mx-[5vw] rounded-lg p-6 lg:p-[1.8vw]  text-center"
@@ -88,7 +93,7 @@ function App() {
                   <span className="text-[18px] md:text-2xl font-semibold text-gray-900 dark:text-white">
                     4.9
                   </span>
-                  <span className="text-gray-600 text-[18px] md:text-lg dark:text-white/65">
+                  <span className="text-gray-600 text-[18px] md:text-lg whitespace-nowrap dark:text-white/65">
                     out of 5 based on
                   </span>
                   <span className="font-bold text-[18px] md:text-lg text-gray-900 dark:text-white ">

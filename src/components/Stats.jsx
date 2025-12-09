@@ -30,8 +30,8 @@ export default function Stats() {
   ];
 
   return (
-    <div className=" py-8 my-16 px-6 md:px-[5vw] space-y-12 lg:space-y-[4vw]">
-      <div className="mx-auto max-w-2xl flex flex-col lg:flex-row items-center justify-between lg:max-w-full text-center lg:text-left">
+    <div className=" py-8 my-16 px-4 md:px-[5vw] space-y-12 lg:space-y-[4vw]">
+      <div className="mx-auto max-w-2xl flex flex-col lg:flex-row items-center justify-between lg:max-w-full text- lg:text-left">
         <h2 className="font-display text-[32px] lg:text-3xl font- font-comfortaa text-gray-900 dark:text-white sm:text-4xl">
           Endless Entertainment, <br /> Instantly
         </h2>

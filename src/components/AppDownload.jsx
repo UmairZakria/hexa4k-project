@@ -13,15 +13,15 @@ export default function AppDownload() {
   };
   return (
     <section id="download" className="bg-gray-50 relative px-6 lg:px-[5vw]  w-full flex items-center h-auto lg:h-[60vh] justify-center dark:bg-background-dark py-16 lg:py-[10vw] z-[1] ">
-      <div className="  absolute top-1/6 md:top-3/4  blur-[4px] md:blur-[0.5vw] left-1/2 md:left-1/4 grayscale-100 -translate-x-1/2 -translate-y-1/2 z-[1] md:h-[20vw] h-[150px]  w-[150px] md:w-[20vw]">
+      <div className="  absolute top-1/6 md:top-[70%]  blur-[4px] md:blur-[0.6vw] left-1/2 md:left-1/4 grayscale-100 -translate-x-1/2 -translate-y-1/2 z-[1] md:h-[20vw] h-[150px]  w-[150px] md:w-[20vw]">
         <img src="logo.png" className="h-full w-full" alt="" />
       </div>
       <div className="  flex flex-col lg:flex-row items-center w-full   justify-around gap-10 lg:gap-0 ">
-        <div className="  w-full lg:w-fit text-center lg:text-left ">
+        <div className="  w-full lg:w-fit text-left ">
           <h2 className="font-comfortaa text-[32px] lg:text-3xl font-light tracking-tight text-gray-900 dark:text-white sm:text-5xl">
             Download Our App
           </h2>
-          <p className="mt-6 lg:mt-[1.8vw] text-[18px] lg:text-lg w-full max-w-md mx-auto lg:mx-0 lg:w-[25vw]   text-gray-600 dark:text-gray-400">
+          <p className="mt-6 lg:mt-[1.8vw] text-[18px] lg:text-lg w-full  mx-auto lg:mx-0 lg:w-[25vw]   text-gray-600 dark:text-gray-400">
             Get the best streaming experience on your favorite device. Download
             the H4K HEXA app now.
           </p>

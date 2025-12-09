@@ -24,9 +24,9 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="px-6 lg:px-[5vw] py-24 sm:py-[10vw]">
+    <section id="features" className="px-4 lg:px-[5vw] py-24 sm:py-[10vw]">
       <div className="mx-auto w-full lg:w-[50%] lg:text-center">
-        <h2 className=" text-[32px] lg:text-3xl font-medium font-comfortaa  tracking-wide     text-gray-900 dark:text-white sm:text-5xl">
+        <h2 className=" text-[32px] lg:text-3xl font-semibold font-comfortaa  tracking-wide     text-gray-900 dark:text-white sm:text-5xl">
           Everything You Need for Perfect Streaming
         </h2>
         <p className="mt-4 lg:mt-[1.2vw] text-[18px] lg:text-lg  text-gray-600 dark:text-white/65 w-full lg:w-[70%] mx-auto">

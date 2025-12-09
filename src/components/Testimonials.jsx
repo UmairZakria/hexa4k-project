@@ -34,11 +34,11 @@ const reviews = [
 export default function Testimonials() {
   return (
     <section id="reviews" className=" px-6 lg:px-[5vw] py-24 sm:py-32">
-      <div className="mx-auto w-full lg:w-[35vw] text-center lg:text-left">
-        <h2 className="font-comfortaa text-[32px] lg:text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+      <div className=" w-full lg:w-[35vw] text-left lg:text-left">
+        <h2 className="font-comfortaa text-[32px] lg:text-3xl  font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
           What Our Customers Say's
         </h2>
-        <p className="mt-4 lg:mt-[1.3vw] text-[18px] lg:text-lg w-3/4 mx-auto lg:mx-0 text-gray-600 dark:text-gray-400">
+        <p className="mt-4 lg:mt-[1.3vw] text-[18px] lg:text-lg w-3/4  md:mx-auto lg:mx-0 text-gray-600 dark:text-gray-400">
           We're trusted by thousands of happy users worldwide. Here's what they
           think.
         </p>

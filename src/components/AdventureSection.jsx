@@ -149,7 +149,7 @@ const TimelineItem = ({ item, index }) => {
         {/* Content Box (Text) */}
         <div
           className={`
-          max-w-[calc(50%-0.1vw)]    p-4 lg:p-[1vw] text-sm font-poppins text-[16px] md:text-xl
+          max-w-[calc(50%-0.1vw)]    px-3 lg:p-[1vw] text-sm font-poppins text-[16px] md:text-xl
           ${
             isLeft
               ? "text-right pr- md:pr-[3vw]"
@@ -173,7 +173,7 @@ const TimelineItem = ({ item, index }) => {
 // Main Component
 const TimelineComponent = () => {
   return (
-    <div className="py-12 px-4 relative md:py-[10vw] md:px-[5vw] bg-background-light dark:bg-background-dark font-poppins">
+    <div className="py-12 px-0 relative md:py-[10vw] md:px-[5vw] bg-background-light dark:bg-background-dark font-poppins">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-1/2 left-0  z-10 transform-gpu overflow-hidden blur-[24px] md:blur-[4vw] sm:-top-[10vw]"

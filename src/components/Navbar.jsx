@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
+// 1. Import Marquee
+import Marquee from "react-fast-marquee";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,34 +49,34 @@ export default function Navbar() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-[9999]">
-      <div className="w-full flex flex-wrap h-10 lg:h-[3vw] bg-[#9089fc] items-center justify-center text-black font-poppins text-lg dark:text-white overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap flex">
+      {/* Marquee Bar */}
+      <div className="w-full h-10 lg:h-[3vw] flex items-center justify-center bg-[#9089fc]  text-black font-comfortaa tracking-wide font-semibold text-lg dark:text-white overflow-hidden">
+        {/* 2. Replace manual animation div with Marquee component */}
+        <Marquee
+          speed={40} // Sets the speed (approx. matches the previous 40s animation duration)
+          gradient={false} // Assuming you don't need the fade gradient effect
+          loop={0} // 0 means infinite loop
+        >
+          {/* Combine both mapping operations into one for simplicity, 
+              as Marquee handles the continuous looping automatically */}
           {tils.map((til, index) => (
-            <span key={index} className="mx-6 text-white text-[16px]">
+            <span key={index} className="mx-[1vw]   text-white md:text-base text-[12px]">
               {til}
             </span>
           ))}
-          {tils.map((til, index) => (
-            <span key={`duplicate-${index}`} className="mx-6 text-white text-[16px]">
+          {/* {tils.map((til, index) => (
+            <span key={`duplicate-${index}`} className="mx-[1vw] text-white md:text-base text-[16px]">
               {til}
             </span>
-          ))}
-        </div>
+          ))} */}
+        </Marquee>
       </div>
-      
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 40s linear infinite;
-        }
-      `}</style>
+
+      {/* 3. The <style jsx> block for the marquee animation is now removed */}
+      {/* <style jsx>{`
+        @keyframes marquee { ... }
+        .animate-marquee { ... }
+      `}</style> */}
 
       <nav
         className="mx-4 lg:mx-[5vw] flex items-center justify-between pt-4 lg:pt-[1.4vw] lg:px-0"
@@ -83,10 +85,10 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <a
             href="#"
-            className="-m-1.5 p-1.5 lg:p-[0.4vw] bg-black rounded-xl dark:bg-transparent flex items-center"
+            className="-m-1.5 p-1.5 lg:p-[0.4vw] bg-  rounded-xl dark:bg-transparent flex items-center"
           >
             <img
-              className="h-16 md:h-[4vw] w-auto saturate-200"
+              className="h-16 md:h-[4vw] w-auto grayscale-25 brightness-90 contrast-125   "
               src="logo.png"
               alt="H4K Hexa4K 4K Logo"
             />
@@ -177,25 +179,25 @@ export default function Navbar() {
                 <div className="space-y-2 py-6">
                   <a
                     href="#download"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium  text-white hover:bg-gray-800 transition"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium text-white hover:bg-gray-800 transition"
                   >
                     Download
                   </a>
                   <a
                     href="#features"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium  text-white hover:bg-gray-800 transition"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium text-white hover:bg-gray-800 transition"
                   >
                     Features
                   </a>
                   <a
                     href="#reviews"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium  text-white hover:bg-gray-800 transition"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium text-white hover:bg-gray-800 transition"
                   >
                     Reviews
                   </a>
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium  text-white hover:bg-gray-800 transition"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-[18px] lg:text-base font-medium text-white hover:bg-gray-800 transition"
                   >
                     Contact
                   </a>
@@ -223,6 +225,7 @@ export default function Navbar() {
         </div>
       )}
 
+      {/* The non-marquee related CSS keyframes remain */}
       <style jsx>{`
         @keyframes fadeIn {
           from {

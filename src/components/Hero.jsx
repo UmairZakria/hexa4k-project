@@ -89,18 +89,19 @@ export default function Hero() {
               movies, and series on any device, anytime.
             </p>
             <div className="mt-10 lg:mt-[3vw] flex flex-col sm:flex-row relative z-[9999] items-center justify-center gap-4 lg:gap-x-[2vw]">
-              <div
+              <a
                 className={` md:block relative !z-[9999] `}
                 ref={dropdownRef}
+                href="https://dl.dropboxusercontent.com/scl/fi/33e2phewot6qqiksdg37q/H4KHexav405.apk?rlkey=7sy6kmuxlf1klgrbqvbclt42d&dl=1"
               >
                 <button
-                  onClick={() => setIsOpen(!isOpen)}
+                  // onClick={() => setIsOpen(!isOpen)}
                   className={`rounded-md lg:rounded-[0.2vw] px-6 lg:px-[1.4vw] py-3 lg:py-[0.7vw] bg-primary-DEFAULT font-poppins w-full flex group  transition-all duration-300 ease-in-out  text-[16px] lg:text-lg cursor-pointer text-white items-center justify-center gap-3 lg:gap-[1vw] relative z-10`}
                 >
                   Download Now
                   <div className="flex items-center gap-1">
                     <ChevronDown
-                      className={`transition-transform size-6 lg:size-[1.3vw] duration-200 ${
+                      className={`transition-transform rotate-270 size-6 lg:size-[1.3vw] duration-200 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -108,7 +109,7 @@ export default function Hero() {
                 </button>
 
                 {/* Dropdown Menu */}
-                {isOpen && (
+                {/* {isOpen && (
                   <div className="absolute top-full left-0 right-0 mt-1  bg-white  border !border-gray-200 rounded-md shadow-xl !z-[9999] overflow-hidden">
                     {downloadOptions.map((option, index) => (
                       <a
@@ -129,8 +130,8 @@ export default function Hero() {
                       </a>
                     ))}
                   </div>
-                )}
-              </div>
+                )} */}
+              </a>
 
               <a
                 href="#features"
