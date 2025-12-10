@@ -14,7 +14,7 @@ export default function Footer() {
                 alt="H4K HEXA 4K Logo"
               />
               <span className="ml-3 font-display text-[20px] lg:text-xl font-bold text-gray-800 dark:text-white">
-                H4K HEXA
+              HEXA 4K
               </span>
             </a>
             <p className="mt-4 text-[14px] lg:text-sm text-gray-500 dark:text-gray-400">
