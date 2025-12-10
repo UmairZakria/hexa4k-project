@@ -49,7 +49,7 @@ export default function AppDownload() {
               </button>
             </a>
             <a
-              href="#"
+              href="https://apps.apple.com/pk/app/smarters-player-lite/id1628995509"
               className="flex items-center justify-center gap-4 rounded-lg bg-primary-DEFAULT/10 dark:bg-gradient-to-bl from-primary-DEFAULT to-transparent p-6 lg:p-[2vw] text-left hover:bg-primary-DEFAULT/20 dark:hover:bg-primary-DEFAULT/30 transition-colors duration-300"
             >
               <button
@@ -73,7 +73,7 @@ export default function AppDownload() {
             </a>
             <a
               // href="#"
-              href="https://aftv.news/1998462"
+              href="https://play.google.com/store/apps/details?id=com.nathnetwork.xciptv"
 
               className="flex items-center justify-center gap-4 rounded-lg bg-primary-DEFAULT/10 dark:bg-gradient-to-tr from-primary-DEFAULT to-transparent p-6 lg:p-[2vw] text-left hover:bg-primary-DEFAULT/20 dark:hover:bg-primary-DEFAULT/30 transition-colors duration-300"
             >
@@ -97,7 +97,7 @@ export default function AppDownload() {
               </button>
             </a>
             <a
-              href="#"
+              href="https://www.filehorse.com/download-iptv-smarters-pro/download/"
               className="flex items-center justify-center gap-4 rounded-lg bg-primary-DEFAULT/10 dark:bg-gradient-to-tl from-primary-DEFAULT to-transparent p-6 lg:p-[2vw] text-left hover:bg-primary-DEFAULT/20 dark:hover:bg-primary-DEFAULT/30 transition-colors duration-300"
             >
               <button

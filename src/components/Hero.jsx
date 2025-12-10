@@ -23,8 +23,7 @@ export default function Hero() {
       {
         platform: "Android",
         icon: "https://img.icons8.com/?size=40&id=L1ws9zn2uD01&format=png&color=000000",
-        downloadUrl:
-          "https://aftv.news/1998462",
+        downloadUrl: "https://aftv.news/1998462",
       },
       {
         platform: "iOS",
@@ -63,7 +62,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative pt-38 lg:py-0 h-auto lg:h-[70vh]  z-[100] isolate px-6 lg:px-[4vw]">
+    <div className="relative pt-38 lg:py-0 h-auto lg:h-[75vh]  z-[100] isolate px-6 lg:px-[4vw]">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-[24px] md:blur-[4vw] sm:-top-80"
@@ -88,28 +87,41 @@ export default function Hero() {
               Unlock a world of entertainment with thousands of channels,
               movies, and series on any device, anytime.
             </p>
-            <div className="mt-10 lg:mt-[3vw] flex flex-col sm:flex-row relative z-[9999] items-center justify-center gap-4 lg:gap-x-[2vw]">
-              <a
-                className={` md:block relative !z-[9999] `}
-                ref={dropdownRef}
-                href="https://dl.dropboxusercontent.com/scl/fi/33e2phewot6qqiksdg37q/H4KHexav405.apk?rlkey=7sy6kmuxlf1klgrbqvbclt42d&dl=1"
-              >
-                <button
-                  // onClick={() => setIsOpen(!isOpen)}
-                  className={`rounded-md lg:rounded-[0.2vw] px-6 lg:px-[1.4vw] py-3 lg:py-[0.7vw] bg-primary-DEFAULT font-poppins w-full flex group  transition-all duration-300 ease-in-out  text-[16px] lg:text-lg cursor-pointer text-white items-center justify-center gap-3 lg:gap-[1vw] relative z-10`}
+            <div className="space-y-[1vw]">
+              <div className="mt-20 lg:mt-0  text-white flex item-center justify-center">
+                <a
+                  target="_blank"
+                  href="https://hexa4k.net:2087"
+                  className="rounded-md lg:text-lg items-center   border border-white/10 flex gap-4 lg:gap-[1vw] font-poppins hover:bg-primary/90 p-4 lg:py-[0.7vw] lg:px-[1.5vw] bg-primary"
                 >
-                  Download Now
-                  <div className="flex items-center gap-1">
-                    <ChevronDown
-                      className={`transition-transform rotate-270 size-6 lg:size-[1.3vw] duration-200 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </div>
-                </button>
+                  Reseller Portal Login{" "}
+                  <span>
+                    <MoveRight className="size-[1vw]" />
+                  </span>
+                </a>
+              </div>
+              <div className="mt-10 lg:mt-[0] flex flex-col sm:flex-row relative z-[9999] items-center justify-center gap-4 lg:gap-x-[2vw]">
+                <a
+                  className={` md:block relative !z-[9999] `}
+                  ref={dropdownRef}
+                  href="https://dl.dropboxusercontent.com/scl/fi/33e2phewot6qqiksdg37q/H4KHexav405.apk?rlkey=7sy6kmuxlf1klgrbqvbclt42d&dl=1"
+                >
+                  <button
+                    // onClick={() => setIsOpen(!isOpen)}
+                    className={`rounded-md lg:rounded-[0.2vw] px-6 lg:px-[1.4vw] py-3 lg:py-[0.7vw] bg-primary-DEFAULT font-poppins w-full flex group  transition-all duration-300 ease-in-out  text-[16px] lg:text-lg cursor-pointer text-white items-center justify-center gap-3 lg:gap-[1vw] relative z-10`}
+                  >
+                    Download Now
+                    <div className="flex items-center gap-1">
+                      <ChevronDown
+                        className={`transition-transform rotate-270 size-6 lg:size-[1.3vw] duration-200 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </div>
+                  </button>
 
-                {/* Dropdown Menu */}
-                {/* {isOpen && (
+                  {/* Dropdown Menu */}
+                  {/* {isOpen && (
                   <div className="absolute top-full left-0 right-0 mt-1  bg-white  border !border-gray-200 rounded-md shadow-xl !z-[9999] overflow-hidden">
                     {downloadOptions.map((option, index) => (
                       <a
@@ -131,15 +143,16 @@ export default function Hero() {
                     ))}
                   </div>
                 )} */}
-              </a>
+                </a>
 
-              <a
-                href="#features"
-                className="relative text-[16px] lg:text-lg  flex items-center gap-x-2 lg:gap-x-[0.5vw] bg-white/5 backdrop-blur-xs border lg:border-[0.1vw] dark:border-white/10  rounded-md lg:rounded-[0.2vw] px-10 lg:px-[1.4vw] py-3 lg:py-[0.7vw]   border-black/15 leading-6 text-gray-900 dark:text-white"
-              >
-                Learn more
-                <MoveRight className="size-6 lg:size-[1vw]" />
-              </a>
+                <a
+                  href="#features"
+                  className="relative text-[16px] lg:text-lg  flex items-center gap-x-2 lg:gap-x-[0.5vw] bg-white/5 backdrop-blur-xs border lg:border-[0.1vw] dark:border-white/10  rounded-md lg:rounded-[0.2vw] px-10 lg:px-[1.4vw] py-3 lg:py-[0.7vw]   border-black/15 leading-6 text-gray-900 dark:text-white"
+                >
+                  Learn more
+                  <MoveRight className="size-6 lg:size-[1vw]" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
