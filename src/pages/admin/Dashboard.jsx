@@ -41,7 +41,9 @@ const Dashboard = () => {
 
   const fetchContent = async () => {
     try {
-      const res = await axios.get("https://hexa4k-server.vercel.app/api/content");
+      const res = await axios.get(
+        "https://hexa4k-server.vercel.app/api/content"
+      );
       setContent(res.data);
       setLoading(false);
     } catch (err) {
@@ -78,6 +80,30 @@ const Dashboard = () => {
     }
   };
 
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
+
+  const updateCredentials = async () => {
+    setSaving(true);
+    setMessage(null);
+    try {
+      await axios.put(
+        "https://hexa4k-server.vercel.app/api/auth/update",
+        credentials
+      );
+      setMessage({
+        type: "success",
+        text: "Credentials updated successfully!",
+      });
+    } catch (err) {
+      setMessage({ type: "error", text: "Failed to update credentials." });
+    } finally {
+      setSaving(false);
+    }
+  };
+
   if (loading)
     return (
       <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
@@ -93,7 +119,7 @@ const Dashboard = () => {
           Admin Panel
         </h1>
         <nav className="flex-1 space-y-2">
-          {["hero", "downloads"].map((tab) => (
+          {["hero", "downloads", "settings"].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -119,13 +145,15 @@ const Dashboard = () => {
       <main className="flex-1 p-8 ml-64 max-w-4xl">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold capitalize">{activeTab} Section</h2>
-          <button
-            onClick={saveContent}
-            disabled={saving}
-            className="bg-primary-DEFAULT hover:bg-primary/90 text-white px-6 py-2 rounded-lg shadow-lg shadow-primary/20 transition disabled:opacity-50 disabled:cursor-not-allowed font-medium"
-          >
-            {saving ? "Saving..." : "Save Changes"}
-          </button>
+          {activeTab !== "settings" && (
+            <button
+              onClick={saveContent}
+              disabled={saving}
+              className="bg-primary-DEFAULT hover:bg-primary/90 text-white px-6 py-2 rounded-lg shadow-lg shadow-primary/20 transition disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+            >
+              {saving ? "Saving..." : "Save Changes"}
+            </button>
+          )}
         </div>
 
         {message && (
@@ -191,6 +219,29 @@ const Dashboard = () => {
                 onChange={(v) => updateField("downloads", "ios", v)}
               />
             </div>
+          </Section>
+        )}
+
+        {activeTab === "settings" && (
+          <Section title="Admin Credentials">
+            <Input
+              label="New Username"
+              value={credentials.username}
+              onChange={(v) => setCredentials({ ...credentials, username: v })}
+            />
+            <Input
+              label="New Password"
+              type="password"
+              value={credentials.password}
+              onChange={(v) => setCredentials({ ...credentials, password: v })}
+            />
+            <button
+              onClick={updateCredentials}
+              disabled={saving}
+              className="bg-primary-DEFAULT hover:bg-primary/90 text-white px-6 py-2 rounded-lg shadow-lg shadow-primary/20 transition disabled:opacity-50 disabled:cursor-not-allowed font-medium mt-4"
+            >
+              {saving ? "Updating..." : "Update Credentials"}
+            </button>
           </Section>
         )}
       </main>
