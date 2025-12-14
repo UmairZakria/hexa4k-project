@@ -12,7 +12,7 @@
   --color-primary-DEFAULT: #8a499f;
   --color-background-light: #f8f9fa;
   --color-background-dark: #0a0a14;
-  
+
   --radius-DEFAULT: 0.75rem;
 
   /* Viewport width based text sizes */
@@ -33,10 +33,18 @@
 
 /* Custom Utilities */
 
-
 /* Custom Utilities */
 .gradient-text {
-  background: linear-gradient(90deg, #f7941d, #f15a24, #ef416d, #8a499f, #28a7de, #009345, #fbb03b);
+  background: linear-gradient(
+    90deg,
+    #f7941d,
+    #f15a24,
+    #ef416d,
+    #8a499f,
+    #28a7de,
+    #009345,
+    #fbb03b
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -49,4 +57,17 @@ html {
 
 body {
   font-family: var(--font-poppins);
+}
+
+@media (max-width: 1024px) {
+  .admin-panel {
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 24px;
+    --text-3xl: 30px;
+    --text-4xl: 36px;
+  }
 }

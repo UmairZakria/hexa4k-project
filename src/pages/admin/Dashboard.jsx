@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Menu, X } from "lucide-react";
 
 const Input = ({ label, value, onChange, type = "text" }) => (
   <div className="mb-4">
@@ -26,6 +27,7 @@ const Section = ({ title, children }) => (
 const Dashboard = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("hero");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [content, setContent] = useState({
     hero: { title: "", subtitle: "", resellerLink: "", downloadLink: "" },
     downloads: { windows: "", mac: "", android: "", ios: "" },
@@ -112,17 +114,51 @@ const Dashboard = () => {
     );
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 font-poppins flex">
+    <div className="admin-panel min-h-screen bg-gray-900 text-gray-100 font-poppins flex flex-col md:flex-row">
+      {/* Mobile Header */}
+      <div className="md:hidden bg-gray-800 p-4 flex justify-between items-center border-b border-gray-700 sticky top-0 z-40">
+        <h1 className="text-xl font-bold text-primary-DEFAULT">Admin Panel</h1>
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="text-gray-300 hover:text-white"
+        >
+          <Menu size={24} />
+        </button>
+      </div>
+
+      {/* Overlay */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 md:hidden backdrop-blur-sm"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <aside className="w-64 bg-gray-800 border-r border-gray-700 p-6 flex flex-col fixed h-full">
-        <h1 className="text-2xl font-bold text-primary-DEFAULT mb-8">
-          Admin Panel
-        </h1>
+      <aside
+        className={`fixed md:sticky top-0 h-screen w-64 bg-gray-800 border-r border-gray-700 p-6 flex flex-col z-50 transition-transform duration-300 ease-in-out ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        }`}
+      >
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-2xl font-bold text-primary-DEFAULT">
+            Admin Panel
+          </h1>
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="md:hidden text-gray-400 hover:text-white"
+          >
+            <X size={24} />
+          </button>
+        </div>
         <nav className="flex-1 space-y-2">
           {["hero", "downloads", "settings"].map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => {
+                setActiveTab(tab);
+                setSidebarOpen(false);
+              }}
               className={`w-full text-left p-3 rounded capitalize transition font-medium ${
                 activeTab === tab
                   ? "bg-primary-DEFAULT text-white shadow-lg shadow-primary/20"
@@ -142,7 +178,7 @@ const Dashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-8 ml-64 max-w-4xl">
+      <main className="flex-1 p-4 md:p-8 w-full md:w-auto overflow-y-auto">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold capitalize">{activeTab} Section</h2>
           {activeTab !== "settings" && (
