@@ -129,7 +129,8 @@ export default function Navbar() {
             Reviews
           </a>
           <a
-            href="#"
+            href="https://wa.me/923313997444"
+            target="_blank"
             className="text-sm leading-6 text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
             Contact
